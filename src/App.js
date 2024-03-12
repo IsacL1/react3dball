@@ -2,8 +2,9 @@ import './App.css';
 
 import React, { useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import Main from './main.js'
-
+//import Main from './main.jsx'
+import { Helmet } from "react-helmet";
+/*
 function Box(props) {
   // This reference will give us direct access to the mesh
   const meshRef = useRef()
@@ -26,7 +27,7 @@ function Box(props) {
     </mesh>
   )
 }
-
+*/
 const App = () => {
   return (
     <div className="App">
@@ -34,7 +35,9 @@ const App = () => {
 
       </header>
       <body>
-      <Main />
+      <Helmet>
+        <script type="text/javascript" src="WindowManager.js"></script>
+      </Helmet>
       </body>
     </div>
     

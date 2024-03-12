@@ -1,5 +1,4 @@
-class WindowManager 
-{
+class WindowManager {
 	#windows;
 	#count;
 	#id;
