@@ -21,7 +21,7 @@ today = today.getTime();
 let windowManager;
 let initialized = false;
 
-	// get time in seconds since beginning of the day (so that all windows use the same time)
+// get time in seconds since beginning of the day (so that all windows use the same time)
 function getTime ()
 {
 	return (new Date().getTime() - today) / 1000.0;

@@ -20,14 +20,14 @@ today = today.getTime();
 let windowManager;
 let initialized = false;
 
+
+// get time in seconds since beginning of the day (so that all windows use the same time)
+const getTime = () =>
+{
+	return (new Date().getTime() - today) / 1000.0;
+}
+
 const Main = () => {
-	// get time in seconds since beginning of the day (so that all windows use the same time)
-	const getTime = () =>
-	{
-		return (new Date().getTime() - today) / 1000.0;
-	}
-
-
 	if (new URLSearchParams(window.location.search).get("clear"))
 	{
 		localStorage.clear();
