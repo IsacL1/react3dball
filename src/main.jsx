@@ -1,12 +1,9 @@
-import { mapLinear } from 'three/src/math/MathUtils.js';
 import WindowManager from './WindowManager.js'
 import * as THREE from 'three';
-import { Canvas, useFrame } from '@react-three/fiber'
-import {Helmet} from "react-helmet";
 
 const t = THREE;
 let camera, scene, renderer, world;
-// let near, far;
+let near, far;
 let pixR = window.devicePixelRatio ? window.devicePixelRatio : 1;
 let cubes = [];
 let sceneOffsetTarget = {x: 0, y: 0};
@@ -72,8 +69,8 @@ const Main = () => {
 			camera = new t.OrthographicCamera(0, 0, window.innerWidth, window.innerHeight, -10000, 10000);
 			
 			camera.position.z = 2.5;
-			// near = camera.position.z - .5;
-			// far = camera.position.z + 0.5;
+			near = camera.position.z - .5;
+			far = camera.position.z + 0.5;
 
 			scene = new t.Scene();
 			scene.background = new t.Color(0.0);
@@ -198,9 +195,9 @@ const Main = () => {
 		}
 	}
 	return (
-		<Helmet>
-			<script src="WindowManager.js" type="text/javascript"/>
-		</Helmet>
+		<div>
+			
+		</div>
 	)
 }
 
